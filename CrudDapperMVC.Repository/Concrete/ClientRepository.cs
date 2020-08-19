@@ -26,7 +26,7 @@ namespace CrudDapperMVC.Repository.Concrete
                 try
                 {
                     var query = "INSERT INTO Client(Name, CPF, Email, Phone, Active, DateRegister) VALUES(@Name, @CPF, @Email, @Phone, @Active, @DateRegister);";
-                    con.Execute(query, client);
+                    con.Execute(query, PrepareObjectToSave(client));
                 }
                 catch (Exception ex)
                 {

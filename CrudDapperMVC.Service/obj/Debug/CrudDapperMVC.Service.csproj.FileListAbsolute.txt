@@ -12,3 +12,17 @@ C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Service\obj\De
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.csproj.CopyComplete
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.dll
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Service.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Service.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Domain.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Repository.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\Dapper.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Domain.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Repository.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\CrudDapperMVC.Repository.dll.config
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\bin\Debug\Dapper.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.csprojAssemblyReference.cache
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.csproj.CoreCompileInputs.cache
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.csproj.CopyComplete
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Service\obj\Debug\CrudDapperMVC.Service.pdb

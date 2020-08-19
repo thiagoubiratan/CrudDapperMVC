@@ -22,3 +22,27 @@ C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Repository\obj
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.csproj.CopyComplete
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.dll
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\CrudDapperMVC.Repository.dll.config
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\CrudDapperMVC.Repository.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\CrudDapperMVC.Repository.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\CrudDapperMVC.Domain.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Dapper.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Buffers.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Memory.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Numerics.Vectors.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\CrudDapperMVC.Domain.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Dapper.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Buffers.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Memory.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Numerics.Vectors.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.csprojAssemblyReference.cache
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.csproj.CoreCompileInputs.cache
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.csproj.CopyComplete
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.dll
+C:\src\CrudDapperMVC\CrudDapperMVC.Repository\obj\Debug\CrudDapperMVC.Repository.pdb
