@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "Scripts/AppController/Controller/ClientController.min.js",
+    "inputFiles": [
+      "Scripts/AppController/Controller/ClientController.js"
+    ]
+  }
+]
