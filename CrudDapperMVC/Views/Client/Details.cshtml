@@ -1,58 +1,35 @@
-﻿@model CrudDapperMVC.Domain.Entities.Client
+﻿@model CrudDapperMVC.Model.Client
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Detalhes</h2>
-
 <div>
-    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
+            @Html.DisplayNameFor(model => model.Name) :
             @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CPF)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF) :
             @Html.DisplayFor(model => model.CPF)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email) :
             @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone) :
             @Html.DisplayFor(model => model.Phone)
-        </dd>
-
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Active) :
+            @Html.DisplayFor(model => model.Active)
+        </dt>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Voltar à lista", "Index")
+    @Html.ActionLink("Voltar à lista", "Index", null, null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn btn-success" })
 </p>

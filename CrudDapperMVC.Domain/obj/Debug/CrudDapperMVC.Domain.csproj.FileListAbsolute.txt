@@ -1,5 +1,0 @@
-C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Domain\bin\Debug\CrudDapperMVC.Domain.dll
-C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Domain\bin\Debug\CrudDapperMVC.Domain.pdb
-C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Domain\obj\Debug\CrudDapperMVC.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Domain\obj\Debug\CrudDapperMVC.Domain.dll
-C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC.Domain\obj\Debug\CrudDapperMVC.Domain.pdb

@@ -95,6 +95,7 @@ C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC\obj\Debug\Crud
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csproj.CopyComplete
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.dll
 C:\Users\Thiago Ubiratan\source\repos\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csproj.CoreCompileInputs.cache
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.dll.config
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.pdb
@@ -148,16 +149,10 @@ C:\src\CrudDapperMVC\CrudDapperMVC\bin\roslyn\vbc.rsp
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\roslyn\VBCSCompiler.exe
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\roslyn\VBCSCompiler.exe.config
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Antlr3.Runtime.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Domain.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Repository.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Service.dll
+C:\src\CrudDapperMVC\CrudDapperMVC\bin\Dapper.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Microsoft.Web.Infrastructure.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Newtonsoft.Json.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Common.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Common.WebHost.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Mvc.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Helpers.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Mvc.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Optimization.dll
@@ -167,15 +162,7 @@ C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.WebPages.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.WebPages.Razor.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\WebActivatorEx.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\WebGrease.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Dapper.dll
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Domain.pdb
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Repository.pdb
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Repository.dll.config
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\CrudDapperMVC.Service.pdb
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.xml
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Common.xml
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Common.WebHost.xml
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Ninject.Web.Mvc.xml
+C:\src\CrudDapperMVC\CrudDapperMVC\bin\Dapper.xml
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Helpers.xml
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Mvc.xml
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.Optimization.xml
@@ -186,9 +173,6 @@ C:\src\CrudDapperMVC\CrudDapperMVC\bin\System.Web.WebPages.Razor.xml
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Newtonsoft.Json.xml
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Antlr3.Runtime.pdb
 C:\src\CrudDapperMVC\CrudDapperMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\src\CrudDapperMVC\CrudDapperMVC\bin\Dapper.xml
-C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csprojAssemblyReference.cache
-C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csproj.CoreCompileInputs.cache
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csproj.CopyComplete
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.pdb

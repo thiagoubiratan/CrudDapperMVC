@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace CrudDapperMVC
 {
@@ -23,16 +22,25 @@ namespace CrudDapperMVC
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/album.css",
+                      "~/Content/sticky-footer-navbar.css",
+                      "~/Content/DataTables/css/jquery.dataTables.min.css"));
+
+            bundles.Add(new ScriptBundle("~/Content/toastrCss").Include(
+                      "~/Content/toastr.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/toastrJs").Include(
+                      "~/Scripts/toastr.min.js",
+                      "~/Scripts/toastrFunction.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
-                    "~/Scripts/inputmask/jquery.inputmask.js",
-                    "~/Scripts/MaskFunction.js"));
+                      "~/Scripts/inputmask/jquery.inputmask.js",
+                      "~/Scripts/MaskFunction.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/dataTablesJs").Include(
-                    "~/Scripts/DataTables/jquery.dataTables.min.js",
-                    "~/Scripts/DataTables/dataTablesFunction.js"));
+                      "~/Scripts/DataTables/jquery.dataTables.min.js",
+                      "~/Scripts/DataTables/dataTablesFunction.js"));
         }
     }
 }

@@ -1,64 +1,44 @@
-﻿@model CrudDapperMVC.Domain.Entities.Client
+﻿@model CrudDapperMVC.Model.Client
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Deletar</h2>
-
-<h3>Deseja deletar o item selecionado?</h3>
+<div class="alert alert-danger" role="alert">
+    Deseja deletar o item selecionado?
+</div>
 <div>
-    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
+            @Html.DisplayNameFor(model => model.Name) :
             @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CPF)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF) :
             @Html.DisplayFor(model => model.CPF)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email) :
             @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
         </dt>
-
-        <dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone) :
             @Html.DisplayFor(model => model.Phone)
-        </dd>
-
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Active) :
+            @Html.DisplayFor(model => model.Active)
+        </dt>
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar à lista", "Index")
+            @Html.ActionLink("Voltar à lista", "Index", null, null, new { @class = "btn btn-warning" })
+            <input type="submit" value="Delete" class="btn btn-danger" />
         </div>
     }
 </div>

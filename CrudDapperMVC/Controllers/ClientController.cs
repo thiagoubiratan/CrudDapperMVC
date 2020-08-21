@@ -1,95 +1,242 @@
-﻿using CrudDapperMVC.Domain.Entities;
-using CrudDapperMVC.Service.Interface;
+﻿using CrudDapperMVC.Model;
+using CrudDapperMVC.Utils;
+using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace CrudDapperMVC.Controllers
 {
     public class ClientController : Controller
     {
-        protected readonly IClientService _service;
-
-        public ClientController(IClientService service)
-        {
-            _service = service;
-        }
-
-        // GET: Client
         public ActionResult Index()
         {
-            List<Client> clients = _service.GetAll();
-            return View(clients);
+            using (SqlConnection con = OpenConnection())
+            {
+                try
+                {
+                    var query = "SELECT * FROM Client ORDER BY Name";
+                    List<Client> clients = con.Query<Client>(query).ToList();
+                    return View(clients);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.Index" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
 
-        // GET: Client/Details/5
         public ActionResult Details(int id)
         {
-            return View(_service.GetByID(id));
+            return View(GetByID(id));
         }
 
-        // GET: Client/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Client/Create
         [HttpPost]
         public ActionResult Create(Client client)
         {
-            try
+            using (SqlConnection con = OpenConnection())
             {
-                _service.Add(client);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
+                try
+                {
+                    if (!Validation(client)) return View(client);
+                    var query = "INSERT INTO Client(Name, CPF, Email, Phone, Active, DateRegister) VALUES(@Name, @CPF, @Email, @Phone, @Active, @DateRegister);";
+                    con.Execute(query, PrepareObjectToSave(client));
+                    TempData["success"] = "Operação realizada com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.Create" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 
-        // GET: Client/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(_service.GetByID(id));
+            using (SqlConnection con = OpenConnection())
+            {
+                try
+                {
+                    var query = "SELECT * FROM Client WHERE Id =" + id;
+                    Client client = con.Query<Client>(query).FirstOrDefault();
+                    return View(client);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.Edit" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
 
-        // POST: Client/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Client client)
         {
-            try
+            using (SqlConnection con = OpenConnection())
             {
-                _service.Update(client);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
+                try
+                {
+                    if (!Validation(client)) return View(client);
+                    var query = "UPDATE Client SET Name = @Name, CPF = @CPF, Email = @Email, Phone = @Phone, Active = @Active WHERE Id = " + client.Id;
+                    con.Execute(query, PrepareObjectToSave(client));
+                    TempData["success"] = "Operação realizada com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 
-        // GET: Client/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(_service.GetByID(id));
+            using (SqlConnection con = OpenConnection())
+            {
+                try
+                {
+                    var query = "SELECT * FROM Client WHERE Id =" + id;
+                    Client client = con.Query<Client>(query).FirstOrDefault();
+                    return View(client);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.Delete" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
 
-        // POST: Client/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            try
+            using (SqlConnection con = OpenConnection())
             {
-                _service.Remove(id);
-                return RedirectToAction("Index");
+                try
+                {
+                    var query = "DELETE FROM Client WHERE Id =" + id;
+                    con.Execute(query);
+                    TempData["success"] = "Operação realizada com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
-            catch
+        }
+
+        private Client GetByID(int id)
+        {
+            Client client = new Client();
+            using (SqlConnection con = OpenConnection())
             {
-                return View();
+                try
+                {
+                    var query = "SELECT * FROM Client WHERE Id =" + id;
+                    client = con.Query<Client>(query).FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.GetByID" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
+            return client;
+        }
+
+        private Client GetByCPF(Client client)
+        {
+            Client clientQuery = new Client();
+            using (SqlConnection con = OpenConnection())
+            {
+                try
+                {
+                    var query = "SELECT * FROM Client WHERE CPF = '" + client.CPF.Replace(".", "").Replace("-", "").Trim() + "' AND  Id <> " + client.Id;
+                    clientQuery = con.Query<Client>(query).FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ClientController.GetByCPF" + ex.Message, ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            return clientQuery;
+        }
+
+        private SqlConnection OpenConnection()
+        {
+            string constr = ConfigurationManager.ConnectionStrings["UserRegistration"].ToString();
+            SqlConnection con = new SqlConnection(constr);
+            con.Open();
+            return con;
+        }
+
+        private Client PrepareObjectToSave(Client client)
+        {
+            return new Client
+            {
+                Active = client.Active,
+                CPF = client.CPF.Replace(".", "").Replace("-", "").Trim(),
+                Email = client.Email,
+                Id = client.Id,
+                Name = client.Name,
+                Phone = client.Phone.Replace("(", "").Replace(")", "").Replace("-", "").Replace("_", "").Replace(" ", "").Trim()
+            };
+        }
+
+        private bool Validation(Client client)
+        {
+            bool validation = true;
+            if (!ValidaCPF.IsCpf(client.CPF.Replace(".", "").Replace("-", "")))
+            {
+                TempData["warning"] = "CPF invalido!";
+                validation = false;
+            }
+            else if (GetByCPF(client) != null)
+            {
+                TempData["warning"] = "CPF já Registrado!";
+                validation = false;
+            }
+            return validation;
         }
     }
 }
