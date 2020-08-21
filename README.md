@@ -1,5 +1,8 @@
-# CrudDapperMVC
-exemplificação de um CRUD básico com Dapper utilizando MVC5 e SqlServer
+<h1> CrudDapperMVC </h1>
+<p>
+  
+exemplificação de um CRUD básico com Dapper utilizando MVC5 e SqlServer  </p>
+
 
 # Tecnologias Usadas
 MVC 5.2.7
