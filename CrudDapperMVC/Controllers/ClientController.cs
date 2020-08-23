@@ -51,8 +51,10 @@ namespace CrudDapperMVC.Controllers
                 try
                 {
                     if (!Validation(client)) return View(client);
-                    var query = "INSERT INTO Client(Name, CPF, Email, Phone, Active, DateRegister) VALUES(@Name, @CPF, @Email, @Phone, @Active, @DateRegister);";
-                    con.Execute(query, PrepareObjectToSave(client));
+                    var query = "INSERT INTO Client(Name, CPF, Email, Phone, Active, DateRegister, ZipCode, Street, Number, AddressComplement, City, Neighborhood, State) " +
+                        "VALUES(@Name, @CPF, @Email, @Phone, @Active, @DateRegister, @ZipCode, @Street, @Number, @AddressComplement, @City, @Neighborhood, @State);";
+                    Client pClient = PrepareObjectToSave(client);
+                    con.Execute(query, pClient);
                     TempData["success"] = "Operação realizada com sucesso!";
                     return RedirectToAction("Index");
                 }
@@ -97,7 +99,9 @@ namespace CrudDapperMVC.Controllers
                 try
                 {
                     if (!Validation(client)) return View(client);
-                    var query = "UPDATE Client SET Name = @Name, CPF = @CPF, Email = @Email, Phone = @Phone, Active = @Active WHERE Id = " + client.Id;
+                    var query = "UPDATE Client SET Name = @Name, CPF = @CPF, Email = @Email, Phone = @Phone, Active = @Active, " +
+                        "ZipCode = @ZipCode, Street = @Street, Number = @Number, AddressComplement = @AddressComplement, City = @City, Neighborhood = @Neighborhood, State = @State " +
+                        "WHERE Id = " + client.Id;
                     con.Execute(query, PrepareObjectToSave(client));
                     TempData["success"] = "Operação realizada com sucesso!";
                     return RedirectToAction("Index");
@@ -187,7 +191,8 @@ namespace CrudDapperMVC.Controllers
             {
                 try
                 {
-                    var query = "SELECT * FROM Client WHERE CPF = '" + client.CPF.Replace(".", "").Replace("-", "").Trim() + "' AND  Id <> " + client.Id;
+                    string pCpf = PrepareToCpf(client.CPF);
+                    var query = "SELECT * FROM Client WHERE CPF = '" + pCpf + "' AND  Id <> " + client.Id;
                     clientQuery = con.Query<Client>(query).FirstOrDefault();
                 }
                 catch (Exception ex)
@@ -210,23 +215,10 @@ namespace CrudDapperMVC.Controllers
             return con;
         }
 
-        private Client PrepareObjectToSave(Client client)
-        {
-            return new Client
-            {
-                Active = client.Active,
-                CPF = client.CPF.Replace(".", "").Replace("-", "").Trim(),
-                Email = client.Email,
-                Id = client.Id,
-                Name = client.Name,
-                Phone = client.Phone.Replace("(", "").Replace(")", "").Replace("-", "").Replace("_", "").Replace(" ", "").Trim()
-            };
-        }
-
         private bool Validation(Client client)
         {
             bool validation = true;
-            if (!ValidaCPF.IsCpf(client.CPF.Replace(".", "").Replace("-", "")))
+            if (!ValidaCPF.IsCpf(PrepareToCpf(client.CPF)))
             {
                 TempData["warning"] = "CPF invalido!";
                 validation = false;
@@ -237,6 +229,41 @@ namespace CrudDapperMVC.Controllers
                 validation = false;
             }
             return validation;
+        }
+
+        private Client PrepareObjectToSave(Client client)
+        {
+            return new Client
+            {
+                Active = client.Active,
+                CPF = PrepareToCpf(client.CPF),
+                Email = client.Email,
+                Id = client.Id,
+                Name = client.Name,
+                Phone = PrepareToPhone(client.Phone),
+                ZipCode = PrepareToZipCode(client.ZipCode),
+                Street = client.Street,
+                Number = client.Number,
+                AddressComplement = client.AddressComplement,
+                City = client.City,
+                Neighborhood = client.Neighborhood,
+                State = client.State
+            };
+        }
+
+        private string PrepareToCpf(string cpf)
+        {
+            return cpf.Replace(".", "").Replace("-", "").Trim();
+        }
+
+        private string PrepareToPhone(string phone)
+        {
+            return phone.Replace("(", "").Replace(")", "").Replace("-", "").Replace("_", "").Replace(" ", "").Trim();
+        }
+
+        private string PrepareToZipCode(string zipCode)
+        {
+            return zipCode.Replace(".", "").Replace("-", "").Trim();
         }
     }
 }

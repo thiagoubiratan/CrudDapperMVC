@@ -176,3 +176,4 @@ C:\src\CrudDapperMVC\CrudDapperMVC\bin\Microsoft.CodeDom.Providers.DotNetCompile
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csproj.CopyComplete
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.dll
 C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.pdb
+C:\src\CrudDapperMVC\CrudDapperMVC\obj\Debug\CrudDapperMVC.csprojAssemblyReference.cache

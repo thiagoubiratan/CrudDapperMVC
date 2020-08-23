@@ -36,6 +36,7 @@ namespace CrudDapperMVC
 
             bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
                       "~/Scripts/inputmask/jquery.inputmask.js",
+                      "~/Scripts/CEPFunction.js",
                       "~/Scripts/MaskFunction.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/dataTablesJs").Include(
