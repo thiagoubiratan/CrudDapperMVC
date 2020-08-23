@@ -1,8 +1,5 @@
 ![Logo Dapper](https://github.com/thiagoubiratan/CrudDapperMVC/blob/master/Dapper.logo.png)
 
-<h1> CrudDapperMVC </h1>
-exemplificação de um CRUD básico com Dapper utilizando MVC5 e SqlServer
-
 # Crud Dapper ORM com MVC
 CRUD básico com Dapper utilizando MVC5 e SqlServer.
 
