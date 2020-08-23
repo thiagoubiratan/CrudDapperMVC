@@ -1,5 +1,6 @@
 # Crud Dapper ORM com MVC
 CRUD básico com Dapper utilizando MVC5 e SqlServer.
+![Logo Dapper](https://github.com/thiagoubiratan/CrudDapperMVC/blob/master/Dapper.logo.png)
 
 # Mas o que é Dapper?
 O Dapper é um Micro ORM (Object Relational Mapping) voltado para o desenvolvimento .NET, onde seu principal objetivo é melhorar o desempenho das consultas ao banco de dados. Ele não conta com toda a gama de um ORM mais facilita muito o desenvolvimento de aplicações com melhor desempenho.
